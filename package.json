@@ -1,36 +1,38 @@
 {
-  "name": "yelpito",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start-server": "node server",
-    "start-dev": "webpack -w & nodemon server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sadboiz/yelpito.git"
-  },
-  "author": "Raul Vinueza, Dan Reed",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sadboiz/yelpito/issues"
-  },
-  "homepage": "https://github.com/Sadboiz/yelpito#readme",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12"
-  },
-  "dependencies": {
-    "express": "^4.16.3",
-    "morgan": "^1.9.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2"
-  }
+    "name": "yelpito",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start-server": "nodemon server",
+        "start-dev": "webpack -w & nodemon server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Sadboiz/yelpito.git"
+    },
+    "author": "Raul Vinueza, Dan Reed",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Sadboiz/yelpito/issues"
+    },
+    "homepage": "https://github.com/Sadboiz/yelpito#readme",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "webpack": "^4.1.1",
+        "webpack-cli": "^2.0.12"
+    },
+    "dependencies": {
+        "express": "^4.16.3",
+        "morgan": "^1.9.0",
+        "nodemon": "^1.17.2",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "react-router-dom": "^4.2.2",
+        "sequelize": "^4.37.1"
+    }
 }
