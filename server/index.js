@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const db = require('./db')
 const morgan = require('morgan')
 const path = require('path')
 const bodyParser = require('body-parser')
@@ -14,7 +15,11 @@ app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'))
   })
 
-
-app.listen(port, function () {
-  console.log(`Now listening on port ${port}`);
-})
+db.sync()
+  .then(() => {
+    console.log('db synced')
+    
+    app.listen(port, function () {
+      console.log(`Now listening on port ${port}`);
+    })
+  })
