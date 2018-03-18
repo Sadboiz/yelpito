@@ -1,0 +1,19 @@
+{
+  "name": "yelpito",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sadboiz/yelpito.git"
+  },
+  "author": "Raul Vinueza, Dan Reed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sadboiz/yelpito/issues"
+  },
+  "homepage": "https://github.com/Sadboiz/yelpito#readme"
+}
