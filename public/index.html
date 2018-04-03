@@ -4,11 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yelpito</title>
-    <script src="/bundle.js" defer></script>
+    <!-- <script src="/bundle.js" defer></script> -->
     <style>
     </style>
 </head>
 <body>
     <div id="app"></div>
+    <canvas id ="canvas" width=400 height=400></canvas>
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d")
+const Vertex = function(x, y, z) {
+    this.x = parseFloat(x)
+    this.y = parseFloat(y)
+    this.z = parseFloat(z)
+}
+const CENTER = new Vertex(200,200)
+const SIZE = 150
+const Square = function(center, size) {
+    const halfSide = size / 2
+    this.vertices = [
+        new Vertex(center.x - halfSide, center.y - halfSide, 0),
+        new Vertex(center.x + halfSide, center.y - halfSide, 0),
+        new Vertex(center.x + halfSide, center.y + halfSide, 0),
+        new Vertex(center.x - halfSide, center.y + halfSide, 0)
+    ]
+}
+const mapSquare = new Square(CENTER, SIZE)
+const drawMapSquare = mapSquare => {
+    ctx.beginPath()
+    mapSquare.vertices.forEach((vertex,idx) => {
+        if(idx === 0) {
+            ctx.moveTo(vertex.x, vertex.y)
+        } else {
+            ctx.lineTo(vertex.x, vertex.y)
+        }
+    })
+    ctx.closePath()
+    ctx.stroke()
+    ctx.fill()
+}
+
+drawMapSquare(mapSquare)
+    </script>
 </body>
 </html>
